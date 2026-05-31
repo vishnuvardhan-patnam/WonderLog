@@ -1,0 +1,114 @@
+/* Detail page layout */
+.country-info {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+/* Flag banner */
+.detail-flag {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background: var(--surface-2);
+}
+.detail-flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Main content */
+.detail-main {
+  padding: 1.75rem;
+}
+
+.detail-name {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.detail-capital {
+  font-size: 0.95rem;
+  color: var(--text-2);
+  margin-bottom: 1.5rem;
+}
+
+/* Stats grid (2 columns on small, 3 on wider) */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-icon  { font-size: 1.2rem; }
+.stat-label { font-size: 0.75rem; color: var(--text-3); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+.stat-value { font-size: 0.9rem;  color: var(--text);   font-weight: 600; }
+
+/* Neighbors */
+.neighbors-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--text);
+}
+
+.neighbors-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.neighbor-chip {
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  border-radius: 99px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.action-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.action-btn:hover:not(:disabled) { opacity: 0.9; }
+.action-btn:active { transform: scale(0.98); }
+
+.action-btn.bucket        { background: var(--coral);    color: #fff; }
+.action-btn.bucket.active { background: #fda4af;         color: #9f1239; }
+
+.action-btn.visited        { background: var(--teal);    color: #fff; }
+.action-btn.visited.active { background: var(--teal-light); color: var(--teal-dark); }
